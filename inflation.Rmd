@@ -59,9 +59,6 @@ inflation %>%
 
 A code chunk is for longer code/output:
 
-```{r}
-with(mtcars, plot(hp, mpg))
-```
 
 Inline code is for single numbers/short text:
 
