@@ -21,7 +21,7 @@ repro::automate_load_scripts()
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-The **dataset** we use stems from the [Bank of England Research datasets](https://www.bankofengland.co.uk/statistics/research-datasets).
+The dataset we use stems from the [Bank of England Research datasets](https://www.bankofengland.co.uk/statistics/research-datasets).
 
 I quote:
 
@@ -50,6 +50,10 @@ inflation %>%
   ungroup() %>% 
   ggplot() +
   geom_line(aes(date, value, color = name)) +
+    theme_minimal() +
+  ylab("subjective inflation in %-points") +
+  labs(color = "") +
+  theme(legend.position = c(.1, .9)) +
   NULL
 ```
 
@@ -62,3 +66,8 @@ with(mtcars, plot(hp, mpg))
 Inline code is for single numbers/short text:
 
 We have `32` cars.
+
+```{python}
+print("Hello World! Python here, do you miss R already?")
+```
++++
